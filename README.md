@@ -1,1 +1,1 @@
-AngularDashboard
+Esse projeto foi criado com o intuito de desenvolver um dashboard sem qualquer biblioteca de estilo (Material Design / Bootstrap)

@@ -1,0 +1,107 @@
+.content {
+    padding: 20px;
+}
+
+.indicators {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.indicators .card {
+    width: 29%;
+}
+
+.card-title, h2 {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    color: #7e868c;
+}
+
+.card-content, p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #7e868c;
+}
+
+.indicators .card .circle {
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+    background: #8a2be2;
+    float: right;
+}
+
+.indicators .card h2 {
+    font-size: 14px;
+}
+
+.indicators .card p {
+    font-size: 16px;
+}
+
+.user-info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-info .card {
+    width: 46%;
+}
+
+.user-info .card h2 {
+    @extend .card-title;
+}
+
+.user-info .card p {
+    @extend .card-content;
+}
+
+.user-info .card table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+.user-info .card tr {
+    border-bottom: solid 1px #ddd;
+}
+
+.user-info .card tr:first-child {
+    border-top: solid 1px #ddd;
+}
+
+.user-info .card tr:hover {
+    background: rgba(0, 0, 0, .03);
+}
+
+.user-info .card th {
+    text-align: left;
+    padding: 0;
+    font-size: 14px;
+
+    @extend .card-title;
+}
+
+.user-info .card td {
+    @extend .card-content;
+}
+
+.user-info .card td:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    background: #F7F7F7;
+    margin-right: 15px;
+    //----------------------
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //----------------------
+}

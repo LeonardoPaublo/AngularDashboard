@@ -1,0 +1,45 @@
+<div class="content">
+  <!-- Indicators -->
+  <div class="indicators">
+    <div class="card">
+      <div class="circle"></div>
+      <h2>Number Of Users</h2>
+      <p>{{ lstUser.length }}</p>
+    </div>
+
+    <div class="card">
+      <div class="circle"></div>
+      <h2>Average Age</h2>
+      <p>{{ AverageAgeUsers() }}</p>
+    </div>
+
+    <div class="card">
+      <div class="circle"></div>
+      <h2>Title</h2>
+      <p>Indicator 3</p>
+    </div>
+  </div>
+
+  <div class="user-info">
+    <div id="user-table" class="card">
+      <h2>Users</h2>
+      <table>
+        <!-- <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Nationality</th>
+        </tr> -->
+        <tr *ngFor="let entUser of lstUser">
+          <td><div class="avatar">[IMG]</div>{{ entUser.name }}</td>
+          <td>{{ entUser.age }}</td>
+          <td>{{ entUser.nationality }}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Title</h2>
+      <canvas id="myChart"></canvas>
+    </div>
+  </div>
+</div>
