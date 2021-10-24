@@ -1,8 +1,29 @@
 body {
     height: 100vh;
     margin: 0;
-    background-color: #F7F7F7;
+    background-color: #f7f7f7;
     font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 .toolbar {
@@ -10,15 +31,15 @@ body {
     background-color: #1976d2;
     z-index: 10;
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 30%);
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 500;
 }
 
 .card {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 10px 20px;
-    border: solid 1px #F7F7F7;
+    border: solid 1px #f7f7f7;
     border-radius: 5px;
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 30%);
     // display: flex;
@@ -28,6 +49,6 @@ body {
  *  Custom 
  */
 
- .spacer {
+.spacer {
     flex: 1 1 auto;
 }

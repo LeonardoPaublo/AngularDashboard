@@ -1,3 +1,4 @@
+import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Chart, ChartConfiguration } from 'chart.js';
 
@@ -72,7 +73,13 @@ export class DashboardComponent implements OnInit {
   config: ChartConfiguration = {
     type: "line",
     data: this.data,
-    options: {}
+    options: {
+      plugins: {
+        legend: {
+          display: false
+        }
+      }
+    }
   };
 
   constructor() { }
@@ -91,9 +98,7 @@ export class DashboardComponent implements OnInit {
 
     this.myChart.update();
 
-    document.getElementById('user-table').style.height = myChartCanvas.height.toString() + 'px !important';
-    console.log(document.getElementById('user-table').style.height)
-    console.log(myChartCanvas)
+    document.getElementById('user-table').style.height = myChartCanvas.height.toString() + 'px';
   }
 
   AverageAgeUsers() {

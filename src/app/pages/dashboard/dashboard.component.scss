@@ -58,10 +58,15 @@
     @extend .card-content;
 }
 
+#user-table {
+    overflow: auto;
+}
+
 .user-info .card table {
     width: 100%;
     margin-top: 10px;
     border-collapse: collapse;
+    display: inline-table;
 }
 
 .user-info .card tr {

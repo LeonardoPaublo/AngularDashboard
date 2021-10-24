@@ -21,24 +21,26 @@
   </div>
 
   <div class="user-info">
-    <div id="user-table" class="card">
+    <div class="card">
       <h2>Users</h2>
-      <table>
-        <!-- <tr>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Nationality</th>
-        </tr> -->
-        <tr *ngFor="let entUser of lstUser">
-          <td><div class="avatar">[IMG]</div>{{ entUser.name }}</td>
-          <td>{{ entUser.age }}</td>
-          <td>{{ entUser.nationality }}</td>
-        </tr>
-      </table>
+      <div id="user-table">
+        <table>
+          <!-- <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Nationality</th>
+          </tr> -->
+          <tr *ngFor="let entUser of lstUser">
+            <td><div class="avatar">[IMG]</div>{{ entUser.name }}</td>
+            <td>{{ entUser.age }}</td>
+            <td>{{ entUser.nationality }}</td>
+          </tr>
+        </table>
+      </div>
     </div>
 
     <div class="card">
-      <h2>Title</h2>
+      <h2>Age Of Users</h2>
       <canvas id="myChart"></canvas>
     </div>
   </div>
