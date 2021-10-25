@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
   {
     name: 'Mary',
     age: 25,
-    sex: 'Fame',
+    sex: 'Female',
     nationality: 'American'
   },
   {
@@ -36,7 +36,7 @@ export class DashboardComponent implements OnInit {
   {
     name: 'Sônia',
     age: 23,
-    sex: 'Fame',
+    sex: 'Female',
     nationality: 'Brazilian'
   },
   {
@@ -54,25 +54,23 @@ export class DashboardComponent implements OnInit {
   {
     name: 'Sakura',
     age: 36,
-    sex: 'Fame',
+    sex: 'Female',
     nationality: 'Japonese'
   }];
 
   // UserChart
   myChart: Chart;
-  labels = [];
-  data = {
-    labels: this.labels,
-    datasets: [{
-      label: 'User Age',
-      backgroundColor: 'rgba(153, 102, 255)',
-      borderColor: 'rgb(153, 102, 255)',
-      data: [],
-    }]
-  };
-  config: ChartConfiguration = {
+  myChartConfig: ChartConfiguration = {
     type: "line",
-    data: this.data,
+    data: {
+      labels: [],
+      datasets: [{
+        label: 'User Age',
+        backgroundColor: 'rgba(153, 102, 255)',
+        borderColor: 'rgb(153, 102, 255)',
+        data: [],
+      }]
+    },
     options: {
       plugins: {
         legend: {
@@ -88,17 +86,32 @@ export class DashboardComponent implements OnInit {
     var myChartCanvas = document.getElementById('myChart') as HTMLCanvasElement;
     this.myChart = new Chart(
       myChartCanvas,
-      this.config
+      this.myChartConfig
     );
 
     this.lstUser.forEach(entUser => {
-      this.labels.push(entUser.name);
-      this.data.datasets[0].data.push(entUser.age)
+      this.myChartConfig.data.labels.push(entUser.name);
+      this.myChartConfig.data.datasets[0].data.push(entUser.age)
     });
 
     this.myChart.update();
 
     document.getElementById('user-table').style.height = myChartCanvas.height.toString() + 'px';
+  }
+
+
+  MenPercentage() {
+    let totalUsers = this.lstUser.length;
+    let menUsers = this.lstUser.filter(x => x.sex == 'Male').length;
+    
+    return ((menUsers * 100) / totalUsers)
+  }
+  
+  WomenPercentage() {
+    let totalUsers = this.lstUser.length;
+    let womenUsers = this.lstUser.filter(x => x.sex == 'Female').length;
+
+    return ((womenUsers * 100) / totalUsers)
   }
 
   AverageAgeUsers() {
