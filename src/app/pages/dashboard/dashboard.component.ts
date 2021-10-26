@@ -13,49 +13,81 @@ export class DashboardComponent implements OnInit {
     name: 'João',
     age: 30,
     sex: 'Male',
-    nationality: 'Brazilian'
+    nationality: 'Brazilian',
+    tasks: {
+      total: 100,
+      done: 30
+    }
   },
   {
     name: 'Mary',
     age: 25,
     sex: 'Female',
-    nationality: 'American'
+    nationality: 'American',
+    tasks: {
+      total: 50,
+      done: 40
+    }
   },
   {
     name: 'Jafari',
     age: 21,
     sex: 'Male',
-    nationality: 'South African'
+    nationality: 'South African',
+    tasks: {
+      total: 80,
+      done: 10
+    }
   },
   {
     name: 'Haruto',
     age: 35,
     sex: 'Male',
-    nationality: 'Japonese'
+    nationality: 'Japonese',
+    tasks: {
+      total: 20,
+      done: 20
+    }
   },
   {
     name: 'Sônia',
     age: 23,
     sex: 'Female',
-    nationality: 'Brazilian'
+    nationality: 'Brazilian',
+    tasks: {
+      total: 30,
+      done: 28
+    }
   },
   {
     name: 'John',
     age: 21,
     sex: 'Male',
-    nationality: 'American'
+    nationality: 'American',
+    tasks: {
+      total: 100,
+      done: 30
+    }
   },
   {
     name: 'Jamal',
     age: 40,
     sex: 'Male',
-    nationality: 'South African'
+    nationality: 'South African',
+    tasks: {
+      total: 26,
+      done: 15
+    }
   },
   {
     name: 'Sakura',
     age: 36,
     sex: 'Female',
-    nationality: 'Japonese'
+    nationality: 'Japonese',
+    tasks: {
+      total: 34,
+      done: 18
+    }
   }];
 
   // UserChart
@@ -65,10 +97,10 @@ export class DashboardComponent implements OnInit {
     data: {
       labels: [],
       datasets: [{
-        label: 'User Age',
+        label: 'Age',
         backgroundColor: 'rgba(153, 102, 255)',
         borderColor: 'rgb(153, 102, 255)',
-        data: [],
+        data: []
       }]
     },
     options: {

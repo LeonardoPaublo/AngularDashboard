@@ -25,15 +25,14 @@
       <h2>Users</h2>
       <div id="user-table">
         <table>
-          <!-- <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Nationality</th>
-          </tr> -->
           <tr *ngFor="let entUser of lstUser">
-            <td><div class="avatar">[IMG]</div>{{ entUser.name }}</td>
+            <td>
+              <div class="avatar">[IMG]</div>{{ entUser.name }}
+            </td>
             <td>{{ entUser.age }}</td>
             <td>{{ entUser.nationality }}</td>
+            <td><progress id="file" [value]="entUser.tasks.done" [max]="entUser.tasks.total">{{ (entUser.tasks.done *
+                100) / entUser.tasks.total }}%</progress></td>
           </tr>
         </table>
       </div>
